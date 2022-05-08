@@ -57,6 +57,7 @@ async function run(){
        const result = await collection.deleteOne(query);
        res.send(result);
      })
+     //by id
      app.delete('/email/:id',async(req,res)=>{
       const id = req.params.id;
       const query = {_id:ObjectId(id)}
