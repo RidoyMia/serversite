@@ -19,7 +19,7 @@ async function run(){
      await client.connect()
      const collection = client.db('assignment').collection('services');
      const Mycollection = client.db('assignment').collection('my');
-    
+    //collection
      app.get('/email',async(req,res)=>{
       const email = req.query.email
       const query = {email:email}
