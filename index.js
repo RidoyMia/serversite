@@ -41,7 +41,7 @@ async function run(){
        res.send(result);
 
      })
-     // get operations
+     // get operation
      app.get('/email/:id',async(req,res)=>{
       const id = req.params.id;
       console.log(id)
