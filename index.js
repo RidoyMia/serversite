@@ -33,6 +33,7 @@ async function run(){
       const result =   await cursor.toArray();
       res.send(result)
     })
+    
      app.get('/services/:id',async(req,res)=>{
        const id = req.params.id;
        console.log(id)
@@ -83,11 +84,12 @@ async function run(){
       res.send(result);
 
   })
-  app.post('/services/email',async(req,res)=>{
+  app.post('/email',async(req,res)=>{
     const service = req.body;
     const result = await Mycollection.insertOne(service);
     res.send(result);
   })
+
  
      
   }
